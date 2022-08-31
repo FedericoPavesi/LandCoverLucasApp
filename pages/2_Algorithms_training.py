@@ -13,10 +13,9 @@ st.markdown('### Multi-Layer Perceptron')
 
 st.markdown('Regarding multi-layer perceptron, we built an architecture using Tensorflow’s Keras  python library. Notice also in this case 3x3 images are subject to flip and rotations augmentation. Both models ended up performing best with the same structure, which is reported in figure 3.2, where on the left-hand side we have the architecture for 1x1 input (which has 12 spectral bands) and on the right-hand side for 3x3 input (with 3x3x12 = 108 spectral bands).')
 
-path = 'C:/Users/drikb/Desktop/Tirocinio/Presentation_app/'
 
-mlp1x1 = Image.open(path + 'MLP_1x1_structure.png')
-mlp3x3 = Image.open(path + 'MLP_3x3_structure.png')
+mlp1x1 = Image.open('MLP_1x1_structure.png')
+mlp3x3 = Image.open('MLP_3x3_structure.png')
 
 st.image([mlp1x1, mlp3x3], caption = ['MLP 1x1 structure', 'MLP 3x3 structure'], width = 250)
 

@@ -7,7 +7,6 @@ import ee
 
 st.markdown('# Database creation')
 
-path = 'C:/Users/drikb/Desktop/Tirocinio/Presentation_app/'
 
 ### LUCAS PRESENTATION ########################################################
 
@@ -15,8 +14,8 @@ st.markdown('### Eurostat Lucas')
 
 st.markdown('Eurostat Lucas (Land Use and Cover Area frame Survey) points consists in a __collection of geo-referenced points__ (in WGS84 geodetic system) with an __associated land cover and land use three-digits classification__. Alongside with this information we also find the __date of the survey for each point__ (which will be extremely useful in later steps). The survey takes place every 3 years since 2006 resulting in five collections respectively referred to 2006, 2009, 2012, 2015 and 2018. Unfortunately, Covid-19 pandemic of 2020 delayed 2021 survey to 2022, and it will end in September of the same year. We shall take advantage of information contained __only in 2018 survey__ because, as we will better discuss when analysing remote sensing data source, complementary information from satellites detections is available only starting from 2017. The survey for 2018 cover 27 Europe countries, for a __total amount of 237,768 points__ (considering we have removed points which encountered recording issues). Each point is classified in a three-digits land cover system, which __first digit split land cover in eight classes__: Artificial Land (A), Cropland (B), Woodland (C), Shrubland (D), Grassland (E), Bareland (F), Water (G) and Wetlands (H). Every main category is then divided into a two-level classification of subclasses. The classification for the __first digit is suitable for training our classifiers__, as we are not interested in having more details about ground composition. At the end what we have is a set of geo-referenced points with an 8 classes classification of ground truth. ')
 
-lucas_numerosity = Image.open(path + 'Lucas_country_numerosity.png')
-lucas_LC1 = Image.open(path + 'Lucas_LC1_numerosity.png')
+lucas_numerosity = Image.open('Lucas_country_numerosity.png')
+lucas_LC1 = Image.open('Lucas_LC1_numerosity.png')
 
 st.image(lucas_numerosity,
          caption = 'Per Country Lucas points 2018 numerosity')

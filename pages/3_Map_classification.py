@@ -1,6 +1,7 @@
 import streamlit as st
 from geemap import foliumap
 from PIL import Image
+import ee
 
 st.markdown('# Map classification')
 
