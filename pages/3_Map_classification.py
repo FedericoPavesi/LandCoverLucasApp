@@ -49,12 +49,11 @@ Map.to_streamlit()
 
 st.markdown('Figures below provide an overview of the comparison between Lucas statistics and statistics obtained by applying our classifiers (respectively, random forest 1x1, multi-layer perceptron 1x1, random forest 3x3 and multi-layer perceptron 3x3). Notice for RF 3x3 we were only able to compute two trials as computational time was prohibitive. What we can appreciate is all algorithms produce distributions relatively close to each other, with a Kullback-Leibler divergence from Lucas distribution of around 0.42. RF 3x3 seems the closest one with a score of around 0.41, while conversely MLP 3x3 seems most different scoring 0.46. Unfortunately, even considering the closest prediction, we are far from producing a reliable soil classification. It’s easy to notice from figure 3x3 all classifiers tend to largely overestimate shrubland, wetlands and water; while at the same time they considerably underestimate croplands and woodlands. Anyway, is something we should expect: as mentioned previously, land cover classes are defined by something that goes beyond pure reflectance values, they are complex structures of somehow interacting pixels. Sticking to previous example, a cropland could be defined as a specific structure of a network of pixels: if we see only one green pixel, it is hard to tell what it might belong to, looking instead at a parallelepiped shaped cluster of green pixels, we are prone to think it is a cropland, if we see a collection of adjacent structures of this kind (with eventually some interruption as a street for example) confidence our guess was correct is significantly increased. Moreover, we can spot two other sources of bias in this approach. First, as we already discussed, choosing pixel’s median reflectance especially over one year involves seasonality issues (like snow coverage , water level or croplands stages). Second, it is not simple to tell in which measure Lucas statistics are precise as they are computed using a survey approach (manually weighting recorded points) and we might assume they had to face issues similar to what we encountered (as for example seasonality for water levels).')
 
-path = 'C:/Users/drikb/Desktop/Tirocinio/Presentation_app/'
 
-mlp1x1 = Image.open(path + 'Map_bar_MLP1x1.png')
-mlp3x3 = Image.open(path + 'Map_bar_MLP3x3.png')
-rf1x1 = Image.open(path + 'Map_bar_RF1x1.png')
-rf3x3 = Image.open(path + 'Map_bar_RF3x3.png')
+mlp1x1 = Image.open('Map_bar_MLP1x1.png')
+mlp3x3 = Image.open('Map_bar_MLP3x3.png')
+rf1x1 = Image.open('Map_bar_RF1x1.png')
+rf3x3 = Image.open('Map_bar_RF3x3.png')
 
 st.image(rf1x1, caption = 'RF 1x1 results compared to Lucas statistics')
 st.image(mlp1x1, caption = 'MLP 1x1 results compared to Lucas statistics')
