@@ -2,5 +2,4 @@ streamlit
 geemap
 leafmap
 click==8
-PIL
 ee
