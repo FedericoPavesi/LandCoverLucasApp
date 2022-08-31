@@ -36,6 +36,8 @@ st.markdown('\n')
 
 st.markdown('Lucas points database provides a collection of geo-referenced points with an associated three-digits land-cover class. At the same time, Copernicus Sentinel-2 satellites costellation provides a wide collection of high-resolution earth surface images, composed by 12 spectral bands collecting different wavelenght reflectance.')
 
-st.markdown('In following discussion you will find a detailed explanation of each step performed in order to first obtain a database of pixels reflectance with an associated land cover class, then to train proper land cover classifiers using an algorithm from machine learning (Random Forest) and one from deep learning (Multi-Layer Perceptron), and finally to apply trained classifiers to a map of a regional reflectance.')
+st.markdown('In following discussion you will find an explanation of each step performed in order to first obtain a database of pixels reflectance with an associated land cover class, then to train proper land cover classifiers using an algorithm from machine learning (Random Forest) and one from deep learning (Multi-Layer Perceptron), and finally to apply trained classifiers to a map of a regional reflectance.')
+
+st.markdown('Notice: Detailed results writing is still in progess, here you will find a brief summary which allows to undestand the rationale behind each step')
 
 
