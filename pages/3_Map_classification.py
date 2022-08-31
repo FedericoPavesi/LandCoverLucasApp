@@ -1,5 +1,4 @@
 import streamlit as st
-import ee
 from geemap import foliumap
 from PIL import Image
 

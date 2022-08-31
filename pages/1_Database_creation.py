@@ -4,7 +4,6 @@ from geemap import foliumap
 import ee
 
 
-ee.Initialize()
 
 st.markdown('# Database creation')
 
