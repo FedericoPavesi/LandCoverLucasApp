@@ -1,4 +1,5 @@
 streamlit
+pip
 geemap
 leafmap
 click==8
