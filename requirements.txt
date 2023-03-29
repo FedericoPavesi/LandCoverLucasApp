@@ -2,4 +2,4 @@ streamlit==1.12.2
 geemap==0.13.3
 leafmap==0.9.6
 click==8
-ee==0.1.316
+ee
